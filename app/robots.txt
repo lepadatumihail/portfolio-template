@@ -1,0 +1,23 @@
+# robots.txt for https://example.com
+#
+# Content Signals — how this site's content may be used by automated systems.
+# Spec:  https://contentsignals.org/
+# Draft: https://datatracker.ietf.org/doc/draft-romm-aipref-contentsignals/
+#
+#   search    build a search index and return hyperlinks and short excerpts;
+#             does not cover AI-generated search summaries
+#   ai-input  feed content to an AI model at query time — retrieval-augmented
+#             generation, grounding, generative search answers
+#   ai-train  train or fine-tune AI models
+#
+# yes = permitted. no = not permitted. A signal left out is neither granted
+# nor restricted. Search engines and AI assistants are welcome to crawl, index
+# and cite this site; using it as AI training data is not permitted.
+
+User-Agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+
+# Curated summary for AI assistants: https://example.com/llms.txt

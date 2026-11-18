@@ -1,0 +1,171 @@
+# example.com — web design & AI automation in Marbella
+
+> Alex Doe is a freelance web developer and AI builder in Marbella, Spain. He builds fast websites, web apps and AI automations for small businesses on the Costa del Sol — live in days, from €500. Track record: 6.3M+ Google impressions and 209K clicks from search earned for client sites, 25+ sites shipped, 5+ years of experience, and a 5.0 rating on Google from 17 reviews.
+
+Sites are custom-coded (Next.js), fast-loading, mobile-first and SEO-ready — no page builders. In Google's Lighthouse test the five client sites measured on 2 October 2026 (PageSpeed Insights) score 100/100 for SEO and 94–100 for performance. Every project starts with a 15-minute call and a fixed quote that doesn't change after.
+
+## Services (English)
+
+- [Chatbots & AI agents](https://example.com/chatbots-marbella): WhatsApp assistants, AI phone reception for clinics, and Facebook & Instagram content and ad automation, from €250 a month
+
+- [Web design in Marbella](https://example.com/web-design-marbella): custom websites for small businesses, live in days
+- [App development in Marbella](https://example.com/app-development-marbella): web apps, dashboards and internal tools
+- [AI automation](https://example.com/ai-automation-marbella): AI chatbots, WhatsApp bots and workflow automation for businesses across Spain
+- [SEO in Marbella](https://example.com/seo-marbella): getting a business found on Google, on Google Maps and by AI assistants such as ChatGPT — a one-off setup and an optional automated monthly service, for any website
+
+## Servicios (Español)
+
+- [Chatbots y agentes de IA](https://example.com/es/chatbots-marbella): asistentes de WhatsApp, recepción telefónica y automatización de contenido y anuncios de Facebook e Instagram, desde 250 €/mes
+
+- [Inicio](https://example.com/es): webs rápidas, aplicaciones y automatizaciones con IA para negocios de la Costa del Sol
+- [Diseño web en Marbella](https://example.com/es/diseno-web-marbella): páginas web a medida para negocios, online en días
+- [Desarrollo de apps en Marbella](https://example.com/es/desarrollo-apps-marbella): aplicaciones web, paneles y herramientas internas
+- [Automatización con IA para empresas](https://example.com/es/automatizacion-ia-marbella): chatbots con IA, bots de WhatsApp y automatización de procesos, en toda España
+- [SEO en Marbella](https://example.com/es/seo-marbella): que un negocio aparezca en Google, en Google Maps y en asistentes de IA como ChatGPT — una puesta a punto única y un servicio mensual automatizado opcional, para cualquier web
+
+## Web design by industry (English)
+
+One page per sector, each with its own FAQ.
+
+- [Real estate web design](https://example.com/web-design/real-estate): An estate agency site has to put the search first: filters, a page per listing or development, and an enquiry by form or WhatsApp on each.
+- [Dental clinic website design](https://example.com/web-design/dental-clinics): A dental clinic site has to turn a search into an appointment request: a page per treatment, booking, WhatsApp and a version per language.
+- [Aesthetic clinic website design](https://example.com/web-design/aesthetic-clinics): Treatment pages, a readable price list, doctor profiles and a booking request, in English and Spanish, for aesthetic clinics on the Costa del Sol.
+- [Construction company website design](https://example.com/web-design/construction-companies): A builder's site has to show finished work, explain each type of job and turn a visit from a phone into a quote request.
+- [Car rental website design](https://example.com/web-design/car-rental): A car rental site has to show the car, the daily price and the deposit, then pass the dates to the booking system you already run.
+- [Car wash and car detailing website design](https://example.com/web-design/car-wash-detailing): A car wash site has to show each service with its starting price, prove the finish with before-and-after photos and let a driver ask for a slot from a phone.
+- [Restaurant website design](https://example.com/web-design/restaurants): A restaurant site has to put the menu, hours, map and a way to ask for a table on a phone screen in seconds, in the languages guests search in.
+- [Hotel and holiday rental website design](https://example.com/web-design/hotels-holiday-rentals): A hotel or holiday rental site has to load on a phone, speak the guest's language and hand them to your booking engine before they return to the portal.
+- [Law firm website design](https://example.com/web-design/law-firms): A law firm site has to be found and trusted from abroad: a page per practice area, the lawyers by name, and a separate version per language.
+- Hub: [Web design by industry](https://example.com/web-design)
+
+## Diseño web por sectores (Español)
+
+Una página por sector, cada una con sus preguntas frecuentes. No son traducciones de las páginas en inglés: cada una responde a lo que se busca en español.
+
+- [Diseño web para inmobiliarias](https://example.com/es/diseno-web/inmobiliarias): La web de una inmobiliaria empieza por el buscador: filtros, una ficha por propiedad o promoción y contacto por formulario o WhatsApp en cada una.
+- [Diseño web para clínicas dentales](https://example.com/es/diseno-web/clinicas-dentales): La web de una clínica dental tiene que llevar de la búsqueda a la solicitud de cita: tratamientos, cita online, WhatsApp y una versión por idioma.
+- [Diseño web para clínicas estéticas](https://example.com/es/diseno-web/clinicas-esteticas): Tratamientos explicados, precios a la vista, equipo médico y cita online, en español e inglés, para clínicas estéticas de la Costa del Sol.
+- [Diseño web para empresas de reformas](https://example.com/es/diseno-web/empresas-de-reformas): La web de una empresa de reformas tiene que enseñar obras terminadas, explicar cada servicio y convertir la visita en una solicitud de presupuesto.
+- [Diseño web para alquiler de coches](https://example.com/es/diseno-web/alquiler-de-coches): La web de un rent a car tiene que enseñar el coche, el precio por día y el depósito, y pasar las fechas al sistema de reservas que ya usas.
+- [Diseño web para lavaderos de coches y detailing](https://example.com/es/diseno-web/lavaderos-de-coches): La web de un lavadero tiene que enseñar cada servicio con su precio, demostrar el acabado con fotos del antes y el después y dejar pedir cita desde el móvil.
+- [Diseño web para restaurantes](https://example.com/es/diseno-web/restaurantes): La web de un restaurante tiene que enseñar la carta, el horario, el mapa y cómo pedir mesa en el móvil, en segundos y en el idioma de quien busca.
+- [Diseño web para hoteles y apartamentos turísticos](https://example.com/es/diseno-web/hoteles-apartamentos-turisticos): La web de un hotel o unos apartamentos tiene que cargar en el móvil, hablar el idioma del huésped y llevarlo a tu motor de reservas sin perderlo por el camino.
+- [Diseño web para abogados](https://example.com/es/diseno-web/abogados): La web de un despacho tiene que encontrarla y entenderla un cliente de fuera: una página por área, los abogados con nombre y una versión por idioma.
+- Índice: [Diseño web por sectores](https://example.com/es/diseno-web)
+
+## Услуги (Русский)
+
+- [Чат-боты и ИИ-агенты](https://example.com/ru/chat-boty-marbella): WhatsApp, голосовые ассистенты для клиник, контент и реклама в Facebook и Instagram — от 250 € в месяц
+
+- [Главная](https://example.com/ru): быстрые сайты, приложения и ИИ-автоматизация для бизнеса в Марбелье — от 500 €, запуск за дни, звонок на русском
+- [Создание сайтов в Марбелье](https://example.com/ru/sozdanie-saytov-marbella): сайты на заказ для бизнеса в Марбелье и по Испании — фиксированная цена от 500 €, запуск за дни
+- [Разработка приложений в Марбелье](https://example.com/ru/razrabotka-prilozheniy-marbella): веб-приложения на заказ — онлайн-запись, личные кабинеты, дашборды
+- [ИИ-автоматизация в Марбелье](https://example.com/ru/avtomatizatsiya-ii-marbella): чат-боты 24/7, онлайн-запись, PDF в готовые данные
+- [SEO в Марбелье](https://example.com/ru/seo-marbella): Google, Google Карты и сайт, понятный для ChatGPT — настройка от 500 €, ежемесячно от 300 €, без долгого договора
+
+## Создание сайтов по отраслям (Русский)
+
+Одна страница на отрасль, у каждой свои вопросы и ответы.
+
+- [Создание сайтов для агентств недвижимости](https://example.com/ru/sozdanie-saytov/nedvizhimost): Сайт агентства недвижимости начинается с поиска: фильтры, своя страница у каждого объекта или новостройки и заявка через форму или WhatsApp на каждой.
+- [Создание сайтов для стоматологий](https://example.com/ru/sozdanie-saytov/stomatologii): Сайт стоматологии должен превращать поиск в заявку на приём: страница на каждую услугу, онлайн-запись, WhatsApp и отдельная версия на каждом языке.
+- [Создание сайтов для клиник косметологии](https://example.com/ru/sozdanie-saytov/esteticheskie-kliniki): Страница на каждую процедуру, понятный прайс, профили врачей и заявка на приём — на испанском и английском, для клиник косметологии на Коста-дель-Соль.
+- [Создание сайтов для строительных компаний](https://example.com/ru/sozdanie-saytov/remont-i-stroitelstvo): Сайт строительной компании должен показывать готовые объекты, объяснять каждый вид работ и превращать визит с телефона в заявку на смету.
+- [Создание сайтов для проката автомобилей](https://example.com/ru/sozdanie-saytov/prokat-avtomobiley): Сайт проката должен показать машину, цену за сутки и депозит, а потом передать даты в систему бронирования, которой вы уже пользуетесь.
+- [Создание сайтов для автомоек и детейлинг-центров](https://example.com/ru/sozdanie-saytov/avtomoyki-i-deteyling): Сайт автомойки должен показать каждую услугу с ценой «от», доказать качество фотографиями «до и после» и дать водителю записаться с телефона.
+- [Создание сайтов для ресторанов](https://example.com/ru/sozdanie-saytov/restorany): Сайт ресторана должен за секунды показать на экране телефона меню, часы работы, карту и способ заказать столик — на тех языках, на которых ищут гости.
+- [Создание сайтов для отелей и апартаментов](https://example.com/ru/sozdanie-saytov/oteli-i-apartamenty): Сайт отеля или апартаментов должен быстро открыться на телефоне, заговорить на языке гостя и передать его в ваш модуль бронирования, пока гость не вернулся на портал.
+- [Создание сайтов для юридических фирм](https://example.com/ru/sozdanie-saytov/yuridicheskie-firmy): Клиент из-за границы должен найти сайт юридической фирмы и поверить ему: страница на каждое направление практики, адвокаты по именам и отдельная версия на каждом языке.
+- Все отрасли: [Создание сайтов по отраслям](https://example.com/ru/sozdanie-saytov)
+
+## Кейсы (Русский)
+
+- [Скорость загрузки сайтов в Марбелье: 211 замеров](https://example.com/ru/keysy/skorost-saytov-marbella): Проверил в PageSpeed Insights 211 сайтов ресторанов, салонов, автосервисов и мастеров в Марбелье и Малаге. Медиана — 7,5 с, 91 % медленнее нормы Google.
+- [SEO-продвижение стоматологии в Марбелье: первые 15 месяцев в поиске Google](https://example.com/ru/keysy/seo-kliniki-acme-marbella): Сайт стоматологии в Марбелье за 15 месяцев в Google: 101 872 показа, 1 894 клика и три языка, которые оказались важны. Данные Search Console с периодами.
+- [Мультиязычный сайт недвижимости: четыре языка — четыре разных поисковых рынка](https://example.com/ru/keysy/harbor-homes-mnogoyazychnoe-seo): Портал недвижимости Harbor Homes на четырёх языках: девять месяцев данных Search Console. Шведские страницы стоят вдвое выше английских — и вот почему.
+- Все кейсы: [Кейсы с цифрами](https://example.com/ru/keysy)
+
+## Pricing
+
+- Landing page: from €500 — one page that sells
+- Business site: from €1,500 — your whole business, online
+- Platform & AI: €3,000+ — custom builds, scoped together
+- SEO setup: from €500, one-off — Google, Google Maps and AI-assistant readability for an existing website
+- Monthly SEO: from €300 a month, cancel any time — automated checks, changes reviewed by Alex, one plain report a month
+- Chatbots & AI agents: from €250 a month — a WhatsApp assistant, AI phone reception or Facebook & Instagram automation; the exact price depends on channels and integrations and is set in writing before the build
+
+## Contact
+
+- Email: hello@example.com
+- Phone / WhatsApp: +34 600 00 00 00
+- Instagram: https://instagram.com/yourhandle
+- GitHub: https://github.com/your-username
+- Based in Marbella, serving the Costa del Sol: San Pedro de Alcántara, Puerto Banús, Estepona, Fuengirola, Mijas, Benalmádena, Málaga
+
+## Selected work
+
+- [Bayside Car Rental](https://example.com/bayside-car-rental): luxury car rental in Marbella — a page per car for 57 cars, WhatsApp enquiries with the dates, five languages
+- [Harbor Homes](https://example.com/harbor-homes): luxury property portal for the Costa del Sol in four languages
+- [Acme Clinic](https://example.com/acme-clinic): 24/7 clinic in Marbella — booking wizard, WhatsApp integration, trilingual SEO
+- [Hillside Living](https://example.com/hillside-living): real estate, construction and renovation platform with lead-gen funnels
+- [Atlas Graph](https://example.com/atlas-graph): AI market-intelligence SaaS for the Swiss business landscape
+- [Signal AI](https://example.com/signal-ai): AI crypto research platform with multi-chain wallets
+- [Signal Labs](https://example.com/signal-labs): self-custodial smart wallet on 100+ chains
+- [Bloom Method](https://example.com/bloom-method): bilingual conversion funnel for a digital course
+- [Summit Builders](https://example.com/summit-builders): lead-gen site for a German heating and bath renovation company
+
+## Reviews
+
+Rated 5.0 on Google from 17 reviews, every one of them five stars (copied from Google on 23 October 2026). The 15 written reviews are on one page word for word, each with a link to its original on Google: [Reviews](https://example.com/reviews) · [opiniones](https://example.com/es/opiniones) · [отзывы](https://example.com/ru/otzyvy). The Google Business Profile itself: https://www.google.com/maps?cid=0000000000000000000
+
+- "It replaced three spreadsheets and the team picked it up in a day." — Hannah Weber
+- "Alex built our agency website in under two weeks. […] the new enquiry forms brought in more qualified leads in the first month." — Daniel Reyes
+- "We worked with Example.com on a new website and a small CRM." — Priya Shah
+- "Alex understood what we wanted and built the site and the client system with very little input from us." — Tom Hughes
+- "Our clinic website went live quickly and Alex handled everything from start to finish." — Laura Martín
+- "Delivered a customer-facing analytics dashboard end to end without problems." — Chris Novak
+- "Easy to work with and knows Google, websites and ads well." — Elena García
+- "Alex hat unsere Webseite gebaut und wir sind mit dem Ergebnis sehr zufrieden." (German) — Thomas Keller
+
+## Case studies
+
+Long-form write-ups with the underlying measurements attached — Google Search Console exports, PageSpeed Insights audits and one original survey. Every figure states its source and measurement window, and the studies name the queries that have not been won as well as the ones that have. Data is CC BY 4.0; attribute to example.com.
+
+- [211 Marbella business websites, measured](https://example.com/case-studies/marbella-website-speed-report): original research — PageSpeed Insights run against 211 local business sites in Marbella and Málaga, August 2026. Median mobile score 66/100, median Largest Contentful Paint 7.5s, 91% above Google's 2.5s threshold, 21% of businesses with no website at all.
+- [A Marbella dental clinic's first 15 months in search](https://example.com/case-studies/acme-clinic-marbella-seo): Acme Clinic Marbella — 101,872 impressions and 1,894 clicks from Google between June 2025 and August 2026, average position 11.8, 27% of clicks from outside Spain.
+- [Four languages, four different search markets](https://example.com/case-studies/harbor-homes-multilingual-seo): Harbor Homes — a four-language property portal nine months after launch, where the Swedish pages rank at position 19.3 against 44.2 for the English ones.
+- Spanish versions: [informe de velocidad](https://example.com/es/casos/informe-velocidad-webs-marbella), [caso Acme Clinic](https://example.com/es/casos/seo-clinica-acme-marbella), [caso Harbor Homes](https://example.com/es/casos/harbor-homes-seo-multiidioma)
+- Index: [English](https://example.com/case-studies) · [español](https://example.com/es/casos) · [русский](https://example.com/ru/keysy)
+
+## API
+
+The content on this site is also available as JSON — read-only, no key, no rate limit.
+
+- [API catalog](https://example.com/.well-known/api-catalog): RFC 9727 catalog (application/linkset+json) — start here
+- [OpenAPI 3.1 description](https://example.com/api/v1/openapi.json): machine-readable spec
+- [API documentation](https://example.com/api-docs): human-readable docs
+- [GET /api/v1/profile](https://example.com/api/v1/profile): services, pricing, process and contact details
+- [GET /api/v1/projects](https://example.com/api/v1/projects): shipped work and case studies
+- [GET /api/v1/industries](https://example.com/api/v1/industries): the sector pages in English, Spanish and Russian, each with its URL, markdown twin and FAQ
+
+## Markdown for agents
+
+Every page here answers with markdown instead of HTML when the request carries `Accept: text/markdown` — same URL, `Content-Type: text/markdown; charset=utf-8`, plus an `x-markdown-tokens` header with the estimated token count. HTML stays the default for everything else. The same document is also served at the page URL with `.md` appended, for clients that don't negotiate:
+
+- [Home](https://example.com/index.md), [en español](https://example.com/es.md), [на русском](https://example.com/ru.md)
+- [Web design in Marbella](https://example.com/web-design-marbella.md)
+- [App development in Marbella](https://example.com/app-development-marbella.md)
+- [AI automation](https://example.com/ai-automation-marbella.md)
+- [SEO in Marbella](https://example.com/seo-marbella.md)
+- [Diseño web en Marbella](https://example.com/es/diseno-web-marbella.md)
+- [Desarrollo de apps en Marbella](https://example.com/es/desarrollo-apps-marbella.md)
+- [Automatización con IA para empresas](https://example.com/es/automatizacion-ia-marbella.md)
+- [SEO en Marbella](https://example.com/es/seo-marbella.md)
+- [Web design by industry](https://example.com/web-design.md) and each sector page at its own URL with `.md` appended
+- [Case studies index](https://example.com/case-studies.md) and each study at its own URL with `.md` appended
+- [Reviews](https://example.com/reviews.md), [opiniones](https://example.com/es/opiniones.md), [отзывы](https://example.com/ru/otzyvy.md)
+- Every Spanish and Russian page the same way, e.g. [SEO на русском](https://example.com/ru/seo-marbella.md)
+
+- [Chatbots & AI agents — Markdown](https://example.com/chatbots-marbella.md)
+- [Chatbots y agentes de IA — Markdown](https://example.com/es/chatbots-marbella.md)
+- [Чат-боты и ИИ-агенты — Markdown](https://example.com/ru/chat-boty-marbella.md)

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "hire-alex-doe",
+      "type": "skill-md",
+      "description": "Scope, price and start a website, web app or AI automation build with Alex Doe, a freelance Next.js developer based in Marbella, Spain. Use when someone wants a small-business website, landing page, booking flow, multilingual SEO site, help being found on Google, Google Maps or by AI assistants such as ChatGPT, a dashboard, client portal, WhatsApp or AI chatbot, or workflow automation on the Costa del Sol — or asks what he builds, what it costs, how fast it ships, or how to get in touch.",
+      "url": "/.well-known/agent-skills/hire-alex-doe/SKILL.md",
+      "digest": "sha256:61dc094e9c8557ec8aeef6edc140bfb9b141d08cb407c114d58b3908a393883d"
+    },
+    {
+      "name": "web-project-brief",
+      "type": "skill-md",
+      "description": "Turn a vague \"we need a website\" into a brief precise enough to get a fixed quote on the first call. Use when someone is about to hire a web developer, freelancer or agency and needs to work out scope — pages, languages, booking or payment flows, integrations, content, domain, hosting and deadline — or when preparing to brief Alex Doe (example.com) on a website, web app or AI automation project.",
+      "url": "/.well-known/agent-skills/web-project-brief/SKILL.md",
+      "digest": "sha256:f7a8283ed10eac37591104be57dd0813234da5a3677223a2665ec2b3a9f1b7ac"
+    }
+  ]
+}

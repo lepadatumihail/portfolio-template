@@ -1,0 +1,9 @@
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.day { color: #777873; font-size: 12px; font-weight: 500; }
+.card h3 { margin-top: 28px; font-size: 21px; font-weight: 500; line-height: 1.25; letter-spacing: -0.03em; text-wrap: balance; }
+.description { margin-top: 12px; font-size: 13px; line-height: 1.75; color: #62635f; text-wrap: pretty; }
+@media (max-width: 559px) { .card h3 { margin-top: 20px; } .description { font-size: 14px; } }
+/* the compact home page's three steps: one row, or one column (never two and an orphan).
+   `ol.` outranks card-grid.module.css's .grid whichever file loads last. */
+ol.three { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { ol.three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

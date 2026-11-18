@@ -1,0 +1,197 @@
+.section {
+  --service-rule: rgb(47 46 41 / 11%);
+  --scene-blur: 3px;
+  --scene-opacity: .86;
+  --scene-wash: 18%;
+  --service-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.heading > div { margin-bottom: 18px; }
+.heading h2 { max-width: 900px; }
+.intro { max-width: 700px; margin-bottom: 36px; color: #62625e; font-size: 16px; line-height: 1.75; text-wrap: pretty; }
+@media (min-width: 700px) {
+  .heading > div { padding-top: 40px; margin-bottom: 28px; }
+  .heading h2 { margin-top: 24px; }
+  .intro { margin-bottom: 52px; }
+}
+.section a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.card { --card-surface: #fbfcfa; min-width: 0; position: relative; isolation: isolate; display: flex; flex-direction: column; overflow: hidden; border-radius: 24px; background: var(--card-surface); border: 1px solid rgb(47 46 41 / 9%); box-shadow: 0 4px 8px -4px rgb(47 46 41 / 6%); transition: border-color 250ms, box-shadow 250ms; }
+.web-design { --sketch-ink: #496075; --sketch-muted: #748595; --sketch-wash: #e7edf0; --scene-image: url("/images/services-coast.webp"); }
+.seo { --sketch-ink: #45604c; --sketch-muted: #6b806f; --sketch-wash: #e3ecdf; --scene-image: url("/images/services-bento/coastal-search.webp"); }
+.ai-automation { --sketch-ink: #79533e; --sketch-muted: #977861; --sketch-wash: #f2e3d5; --scene-image: url("/images/services-bento/coastal-automation.webp"); }
+.app-development { --sketch-ink: #444e5c; --sketch-muted: #74808e; --sketch-wash: #e0e6ed; --scene-image: url("/images/services-bento/coastal-workspace.webp"); }
+.art { position: relative; isolation: isolate; display: grid; place-items: center; height: 280px; flex-shrink: 0; overflow: hidden; padding: 28px 24px 8px; color: var(--sketch-ink); mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%); }
+.art::before { content: ""; position: absolute; inset: -18px; z-index: -2; background: var(--scene-image) center / cover; filter: blur(var(--scene-blur)); opacity: calc(var(--scene-opacity) * .66); }
+.art::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgb(255 255 255 / var(--scene-wash)); }
+.scene { width: 100%; max-width: 300px; transition: transform 650ms var(--service-ease); }
+.scene svg { flex-shrink: 0; }
+.seo .art, .ai-automation .art { min-height: 0; padding: 32px 44px 16px; }
+.seo .scene { max-width: 490px; margin-left: 8%; }
+.ai-automation .scene { max-width: 470px; margin-left: 10%; }
+.cardBody { position: relative; flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 0 28px 24px; margin-top: -8px; }
+.cardIntro { max-width: 540px; }
+.cardIntro h3 { font-size: 26px; font-weight: 500; line-height: 1.18; letter-spacing: -0.035em; color: #242521; text-wrap: balance; }
+.cardIntro > p { margin-top: 12px; color: #62625e; font-size: 14px; line-height: 1.65; text-wrap: pretty; }
+.includedBlock { flex: 1; margin-top: 20px; padding-bottom: 20px; }
+.includesLabel { margin-bottom: 10px; color: #71716b; font-size: 12px; }
+/* the compact home page's cards have no list: the link sits a little under the line */
+.compactGap { flex: 1; min-height: 24px; }
+.includes { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.includes { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.includes li { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.6; color: #555650; }
+.includes svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 3px; color: #787a72; }
+.serviceLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding-top: 12px; border-top: 1px solid var(--service-rule); font-size: 13px; font-weight: 500; line-height: 1.5; color: #323830; }
+.serviceLink svg { width: 17px; height: 17px; flex-shrink: 0; transition: transform 200ms var(--service-ease); }
+
+/* A quiet seaside website and a conversation arriving in front of it. */
+.siteScene { position: relative; padding-bottom: 10px; }
+.browserFrame { overflow: hidden; border: 1px solid rgb(255 255 255 / 85%); border-radius: 12px; background: #fbfcfd; box-shadow: 0 2px 4px rgb(61 45 32 / 8%), 0 24px 34px -16px rgb(61 45 32 / 30%); transform: rotate(-4deg); }
+.browserChrome { display: flex; justify-content: space-between; align-items: center; gap: 6px; height: 32px; padding: 0 11px; border-bottom: 1px solid var(--service-rule); color: var(--sketch-muted); font-size: 9px; }
+.browserChrome > span:first-child { display: flex; gap: 3px; }
+.browserChrome i { width: 4px; height: 4px; background: #aab7c3; border-radius: 50%; }
+.browserChrome svg { width: 10px; height: 10px; }
+.siteHero { position: relative; min-height: 172px; padding: 12px 16px 18px; background: #e9eef2; }
+.siteHero::after { content: ""; position: absolute; right: 14px; bottom: 16px; width: 36%; height: 110px; border-radius: 38px 38px 5px 5px; background: url("/images/services-coast.webp") 55% 70% / cover; }
+.siteLanguages { display: flex; justify-content: flex-end; gap: 9px; color: var(--sketch-muted); font-size: 8px; margin-bottom: 20px; }
+.siteLanguages b { color: var(--sketch-ink); font-weight: 500; }
+.siteHero strong { display: block; font-size: 22px; font-weight: 400; letter-spacing: -0.04em; line-height: 1.12; max-width: 55%; }
+.typeLine, .shortLine { display: block; height: 3px; border-radius: 3px; background: rgb(63 85 110 / 17%); margin-top: 13px; width: 47%; }
+.shortLine { width: 35%; margin-top: 5px; }
+.bookingStrip { display: flex; align-items: center; justify-content: space-between; gap: 5px; padding: 12px 10px; color: var(--sketch-muted); font-size: 9px; }
+.bookingStrip b { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; border-radius: 6px; background: #3c566e; color: #fff; font-weight: 400; }
+.bookingStrip svg { width: 11px; height: 11px; }
+.message { position: absolute; bottom: -14px; right: -8px; display: flex; align-items: center; gap: 7px; max-width: 98%; padding: 10px 11px 10px 8px; border: 1px solid rgb(255 255 255 / 95%); border-radius: 12px; color: #526779; font-size: 10px; background: #f8fafc; box-shadow: 0 12px 23px -12px rgb(62 44 28 / 35%); transform: rotate(3deg); }
+.message > span { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: #e8e9dd; color: #6a7655; flex-shrink: 0; }
+.message svg { width: 15px; height: 15px; }
+.message > i { width: 5px; height: 5px; border-radius: 50%; background: #809568; margin-left: 2px; flex-shrink: 0; }
+
+/* Local discovery over a pale shoreline, with a distinct coastal photograph. */
+.foundScene { width: 100%; }
+.searchBox { display: flex; align-items: center; gap: 9px; min-height: 38px; border: 1px solid rgb(255 255 255 / 85%); border-radius: 11px; background: rgb(252 254 250 / 91%); padding: 9px 12px; box-shadow: 0 9px 20px -15px rgb(42 69 42 / 30%); }
+.searchBox svg { width: 15px; height: 15px; color: var(--sketch-muted); }
+.searchBox > span { font-size: 10px; color: var(--sketch-ink); }
+.foundChannels { display: flex; align-items: center; justify-content: center; gap: 23px; margin: 15px 0; }
+.foundChannels > div { display: flex; align-items: center; flex-direction: column; gap: 5px; }
+.foundChannels > div:nth-child(2) { transform: translateY(-5px); }
+.foundChannels > div > span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgb(255 255 255 / 90%); background: rgb(246 251 241 / 91%); border-radius: 11px; box-shadow: 0 7px 12px -8px rgb(40 59 37 / 30%); color: var(--sketch-ink); }
+.foundChannels svg { width: 18px; height: 18px; }
+.foundChannels small { font-size: 8px; color: #334c37; }
+.searchResult { display: flex; align-items: center; gap: 7px; padding: 10px 9px; border: 1px solid rgb(255 255 255 / 90%); background: rgb(248 251 245 / 94%); border-radius: 10px; box-shadow: 0 11px 20px -13px rgb(45 64 39 / 34%); }
+.resultMark { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: #5c7451; background: #e2ead9; flex-shrink: 0; }
+.resultMark svg { width: 12px; height: 12px; }
+.searchResult strong { display: block; font-size: 9px; font-weight: 500; line-height: 1.4; }
+.searchResult div > span { display: block; font-size: 8px; color: var(--sketch-muted); margin-top: 2px; }
+.resultStatus { margin-left: auto; white-space: nowrap; font-size: 8px; color: #5d7752; }
+
+/* Paperwork becomes a record over warm, shallow coastal water. */
+.automationScene { display: flex; align-items: center; width: 100%; padding: 0 1px; }
+.document { width: 75px; flex-shrink: 0; border: 1px solid #fff; border-radius: 9px; background: #fffaf3; padding: 13px 9px 17px; transform: rotate(-8deg); box-shadow: 0 14px 25px -13px rgb(107 64 33 / 28%); }
+.document > svg { width: 25px; height: 25px; color: var(--sketch-muted); margin-bottom: 10px; }
+.document strong { display: block; font-size: 8px; font-weight: 500; margin-bottom: 13px; overflow-wrap: anywhere; }
+.document > span { display: block; height: 3px; margin-top: 6px; border-radius: 3px; background: rgb(111 77 46 / 15%); }
+.document > span:nth-last-child(2) { width: 75%; }.document > span:last-child { width: 56%; }
+.connection { display: flex; align-items: center; justify-content: center; width: 33px; flex-shrink: 0; }
+.connection > span { display: grid; place-items: center; width: 21px; height: 21px; border: 1px solid rgb(255 255 255 / 85%); border-radius: 50%; color: #8d6144; background: #f1d9c0; }
+.connection svg { width: 12px; height: 12px; }.connection i { flex: 1; height: 1px; background: #ba9575; }
+.extraction { min-width: 0; flex: 1; border: 1px solid #fff; border-radius: 12px; background: #fffaf3; padding: 11px 10px 9px; box-shadow: 0 16px 27px -15px rgb(101 62 33 / 30%); transform: rotate(3deg); }
+.extractionHeader { display: flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--service-rule); padding-bottom: 9px; color: var(--sketch-ink); }
+.extractionHeader > svg { width: 14px; height: 14px; }.extractionHeader strong { font-size: 10px; font-weight: 500; }
+.field { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding-top: 9px; font-size: 9px; }
+.field > span { color: var(--sketch-muted); }.field strong { font-weight: 400; font-variant-numeric: tabular-nums; }.field > i { width: 32px; height: 3px; border-radius: 3px; background: rgb(104 73 44 / 20%); }
+.saved { display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 10px; padding: 5px; background: #e9eddc; border-radius: 6px; color: #64724f; font-size: 9px; }
+.saved svg { width: 12px; height: 12px; }
+
+/* An orderly workspace against a quiet silvery sea horizon. */
+.dashboardScene { position: relative; }
+.dashboard { border: 1px solid rgb(255 255 255 / 95%); border-radius: 12px; background: #f6f8fb; overflow: hidden; transform: rotate(-4deg); box-shadow: 0 22px 38px -15px rgb(24 36 51 / 37%); }
+.dashboardHeader { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 17px 12px; border-bottom: 1px solid var(--service-rule); }
+.dashboardHeader > span { display: flex; align-items: center; gap: 6px; font-size: 12px; }.dashboardHeader svg { width: 16px; height: 16px; color: var(--sketch-muted); }
+.dashboardHeader > b { display: flex; align-items: center; gap: 6px; background: #e0e6ee; padding: 6px 8px; font-size: 9px; font-weight: 400; color: #4d6179; border-radius: 5px; }.dashboardHeader b > span { font-size: 12px; }
+.dashboardRows { padding: 0 12px; }.dashboardRow { display: grid; grid-template-columns: 1fr auto minmax(40px, auto); align-items: center; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--service-rule); font-size: 9px; color: var(--sketch-muted); }
+.person { display: flex; align-items: center; gap: 6px; }.person > i { width: 18px; height: 18px; border-radius: 50%; background: #dae1e9; }.person > span { height: 4px; border-radius: 3px; background: #b7c3d0; }
+.status, .currentStatus { width: fit-content; padding: 3px 5px; border-radius: 5px; background: #e5ebf1; color: #63738a; font-size: 8px; white-space: nowrap; }.currentStatus { background: #e2e9df; color: #58734e; }
+.dashboardFoot { display: flex; justify-content: center; gap: 4px; padding: 15px; }.dashboardFoot span { width: 4px; height: 4px; border-radius: 50%; background: #c7d1de; }.dashboardFoot span:first-child { width: 13px; border-radius: 3px; background: #71859f; }
+.dashboardSeal { display: grid; place-items: center; position: absolute; right: -7px; bottom: -12px; width: 39px; height: 39px; border-radius: 13px; border: 1px solid #fff; background: #e4ecdf; color: #638052; box-shadow: 0 8px 14px -8px rgb(35 56 78 / 25%); transform: rotate(6deg); }
+
+/* Product scenes share the same fading card surface. */
+.seo .searchBox { min-height: 52px; padding: 12px 18px; border-radius: 14px; }
+.seo .searchBox > span { font-size: 14px; }
+.seo .searchBox svg { width: 20px; height: 20px; }
+.seo .foundChannels { gap: 40px; margin: 22px 0; }
+.seo .foundChannels > div > span { width: 48px; height: 48px; border-radius: 13px; }
+.seo .foundChannels svg { width: 23px; height: 23px; }
+.seo .foundChannels small { font-size: 10px; }
+.seo .searchResult { padding: 14px; border-radius: 13px; gap: 10px; }
+.seo .searchResult strong { font-size: 13px; }
+.seo .searchResult div > span, .seo .resultStatus { font-size: 10px; }
+.ai-automation .document { width: 112px; padding: 20px 14px 26px; }
+.ai-automation .document > svg { width: 32px; height: 32px; }
+.ai-automation .document strong { font-size: 11px; }
+.ai-automation .document > span { height: 4px; margin-top: 9px; }
+.ai-automation .connection { width: 54px; }
+.ai-automation .connection > span { width: 30px; height: 30px; }
+.ai-automation .extraction { padding: 18px; border-radius: 16px; }
+.ai-automation .extractionHeader { padding-bottom: 14px; }
+.ai-automation .extractionHeader strong { font-size: 14px; }
+.ai-automation .field { padding-top: 14px; font-size: 12px; }
+.ai-automation .saved { font-size: 11px; margin-top: 14px; padding: 7px; }
+
+@media (hover: hover) {
+  .card:hover { border-color: rgb(47 46 41 / 17%); box-shadow: 0 14px 28px -22px rgb(47 46 41 / 20%); }
+  .card:hover .scene { transform: translateY(-4px); }
+  .serviceLink:hover svg { transform: translateX(3px); }
+}
+@media (max-width: 1099px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .art, .seo .art, .ai-automation .art { flex: none; height: 240px; min-height: 0; padding: 26px 28px 8px; }
+  .scene, .seo .scene, .ai-automation .scene { max-width: 300px; margin-left: 0; }
+  .cardBody, .seo .cardBody, .ai-automation .cardBody { flex: 1; padding-inline: 26px; }
+  .cardIntro h3, .seo h3, .ai-automation h3 { font-size: 25px; }
+  .includes { grid-template-columns: minmax(0, 1fr); }
+  .seo .searchBox > span { font-size: 11px; }
+  .seo .foundChannels { gap: 28px; margin: 16px 0; }
+  .seo .searchResult strong { font-size: 10px; }
+  .seo .searchResult div > span, .seo .resultStatus { font-size: 8px; }
+  .ai-automation .document { width: 82px; padding: 14px 10px 20px; }
+  .ai-automation .document strong { font-size: 8px; }
+  .ai-automation .connection { width: 32px; }
+  .ai-automation .extraction { padding: 12px; }
+  .ai-automation .extractionHeader strong { font-size: 10px; }
+  .ai-automation .field { padding-top: 10px; font-size: 9px; }
+  .ai-automation .saved { font-size: 9px; }
+}
+@media (max-width: 699px) {
+  .section { --scene-blur: 5px; --scene-opacity: .78; --scene-wash: 26%; }
+  .grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .intro { font-size: 15px; margin-bottom: 22px; }
+  .card { border-radius: 22px; }
+  .art, .seo .art, .ai-automation .art { height: 156px; padding: 12px 24px 0; align-items: start; }
+  .cardBody, .seo .cardBody, .ai-automation .cardBody { padding: 0 20px 16px; }
+  .cardIntro > p { margin-top: 10px; line-height: 1.6; }
+  .includedBlock { margin-top: 14px; padding-bottom: 12px; }
+  .includesLabel { margin-bottom: 8px; }
+  .includes { row-gap: 6px; }
+  .serviceLink { padding-top: 10px; }
+  .siteHero { min-height: 108px; padding: 8px 14px 10px; }
+  .siteLanguages { margin-bottom: 8px; }
+  .siteHero strong { font-size: 18px; }
+  .siteHero::after { height: 68px; bottom: 12px; }
+  .seo .searchBox { min-height: 38px; padding: 8px 12px; }
+  .seo .foundChannels { margin: 10px 0; }
+  .seo .foundChannels > div > span { width: 34px; height: 34px; border-radius: 10px; }
+  .seo .foundChannels svg { width: 18px; height: 18px; }
+  .dashboardHeader { padding-block: 12px; }
+  .dashboardRow { padding-block: 10px; }
+  .dashboardFoot { padding-block: 10px; }
+  .cardIntro h3, .seo h3, .ai-automation h3 { font-size: 25px; }
+}
+@media (max-width: 380px) {
+  .cardBody, .seo .cardBody, .ai-automation .cardBody { padding-inline: 20px; }
+  .art, .seo .art, .ai-automation .art { padding-inline: 20px; }
+  .cardIntro h3, .seo h3, .ai-automation h3 { font-size: 23px; }
+  .seo .searchResult { gap: 6px; padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section *, .section *::before, .section *::after { transition: none !important; animation: none !important; }
+  .card:hover .scene { transform: none; }
+}

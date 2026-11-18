@@ -1,0 +1,537 @@
+/*
+ * A wide transparent header settles into a slim detached glass bar over 160px of
+ * scroll. Only this fixed-height, isolated frame changes width: page content
+ * never reflows. The backdrop is a separate layer whose opacity fades in,
+ * keeping the blur constant. Native scroll timelines reverse with scrolling
+ * and do not add hydration or an event handler.
+ *
+ * Unsupported browsers and reduced-motion users get the stable floating bar.
+ * The language picker remains a native popover with an anchored menu.
+ */
+
+.nav {
+  --nav-floating-width: 52rem;
+  top: 10px;
+  pointer-events: none;
+}
+
+.frame {
+  width: calc(100% - 24px);
+  max-width: var(--nav-floating-width);
+  padding-inline: 16px;
+  border-radius: 28px;
+  isolation: isolate;
+  pointer-events: auto;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid rgb(255 255 255 / 66%);
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgb(255 255 255 / 38%), rgb(255 255 255 / 4%) 50%, rgb(226 239 252 / 16%)), rgb(248 251 255 / 54%);
+  -webkit-backdrop-filter: blur(22px) saturate(1.65) brightness(1.04);
+  backdrop-filter: blur(22px) saturate(1.65) brightness(1.04);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 88%),
+    inset 0 -1px 0 rgb(30 58 95 / 5%),
+    0 2px 5px -3px rgb(30 58 95 / 12%),
+    0 10px 26px -15px rgb(30 58 95 / 23%);
+}
+
+@media (min-width: 640px) {
+  .frame {
+    width: calc(100% - 48px);
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .frame { padding-inline: 12px; gap: 4px; }
+  .trigger { padding-inline: 8px; }
+}
+
+@keyframes frame-contract {
+  from { max-width: 72rem; }
+  to { max-width: var(--nav-floating-width); }
+}
+
+@keyframes surface-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .frame {
+      animation: frame-contract linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 160px;
+    }
+    .frame::before {
+      animation: surface-in linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 120px;
+    }
+  }
+}
+
+/* ── language picker ── */
+
+.chevron {
+  transition: rotate 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.picker:has(.menu:popover-open) .trigger {
+  color: var(--color-foreground);
+}
+
+.picker:has(.menu:popover-open) .chevron {
+  rotate: 180deg;
+}
+
+.menu {
+  /* undo the UA popover box, which centres itself in the viewport */
+  inset: auto;
+  margin: 0;
+  border: 0;
+  /* fallback spot: 4px under the trigger's 44px hit area, right edge on the
+     page gutter (the trigger's padding hangs into it) */
+  top: 3.75rem;
+  right: 1.75rem;
+  min-width: 11rem;
+  padding: 0.25rem;
+  /* concentric with the items: 0.5rem radius + 0.25rem padding */
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  box-shadow:
+    0 0 0 1px rgb(20 22 26 / 0.07),
+    0 2px 4px -1px rgb(20 22 26 / 0.05),
+    0 12px 32px -6px rgb(20 22 26 / 0.14);
+  transform-origin: top right;
+  /* closed state; exits run faster than the entrance */
+  opacity: 0;
+  scale: 0.97;
+  transition-property: opacity, scale, display, overlay;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-behavior: allow-discrete;
+}
+
+@media (min-width: 640px) {
+  .menu {
+    top: 3.875rem;
+    /* Fallback beneath the contracted frame; anchor positioning wins below. */
+    right: max(3rem, calc((100% - 52rem) / 2 + 1.5rem));
+  }
+}
+
+.menu:popover-open {
+  opacity: 1;
+  scale: 1;
+  transition-duration: 150ms;
+}
+
+@starting-style {
+  .menu:popover-open {
+    opacity: 0;
+    scale: 0.97;
+  }
+}
+
+/* after the media query, so the anchor wins at every width */
+@supports (anchor-name: --a) {
+  .trigger {
+    anchor-name: --site-language;
+  }
+
+  .menu {
+    position-anchor: --site-language;
+    top: calc(anchor(bottom) + 0.25rem);
+    /* 0.75rem: the trigger's right padding, so the menu lines up with the
+       chevron rather than with the hit area */
+    right: calc(anchor(right) + 0.75rem);
+  }
+}
+
+/* no Popover API (Safari before 17, Firefox before 125): inline codes */
+.fallback {
+  display: none;
+}
+
+@supports not selector(:popover-open) {
+  .trigger,
+  .menu {
+    display: none;
+  }
+
+  .fallback {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu:popover-open {
+    scale: none;
+  }
+
+  .menu {
+    transition-property: opacity, display, overlay;
+  }
+
+  .chevron {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .frame::before { background: #fbfbf9; backdrop-filter: none; -webkit-backdrop-filter: none; border-color: #b6c3d0; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .frame::before { background: #fbfbf9; }
+}
+
+/* ── Services menu (md and up) ── */
+
+.nav:has(.servicesMenu:popover-open) .servicesTrigger {
+  color: var(--color-foreground);
+}
+
+.nav:has(.servicesMenu:popover-open) .servicesTrigger .chevron {
+  rotate: 180deg;
+}
+
+.servicesMenu {
+  inset: auto;
+  margin: 0;
+  border: 0;
+  /* the <nav> lets clicks through outside its bar; its panels take them */
+  pointer-events: auto;
+  /* fallback spot: centred under the bar; anchor positioning wins below */
+  top: 3.875rem;
+  left: calc(50% - 11rem);
+  width: 22rem;
+  padding: 0.375rem;
+  /* concentric with the items: 0.625rem radius + 0.375rem padding */
+  border-radius: 1rem;
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  box-shadow:
+    0 0 0 1px rgb(20 22 26 / 0.07),
+    0 2px 4px -1px rgb(20 22 26 / 0.05),
+    0 16px 40px -8px rgb(20 22 26 / 0.16);
+  transform-origin: top left;
+  opacity: 0;
+  scale: 0.97;
+  transition-property: opacity, scale, display, overlay;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-behavior: allow-discrete;
+}
+
+.servicesMenu:popover-open {
+  opacity: 1;
+  scale: 1;
+  transition-duration: 180ms;
+}
+
+@starting-style {
+  .servicesMenu:popover-open {
+    opacity: 0;
+    scale: 0.97;
+  }
+}
+
+@supports (anchor-name: --a) {
+  .servicesTrigger {
+    anchor-name: --site-services;
+  }
+
+  .servicesMenu {
+    position-anchor: --site-services;
+    top: calc(anchor(bottom) + 0.25rem);
+    left: anchor(left);
+  }
+}
+
+.serviceItem {
+  display: block;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.625rem;
+  transition: background-color 150ms;
+}
+
+.serviceItem:hover,
+.serviceItem:focus-visible,
+.serviceItem[aria-current] {
+  background: rgb(20 22 26 / 0.04);
+}
+
+.serviceItem:focus-visible,
+.menuFoot:focus-visible,
+.mobileItem:focus-visible,
+.languageChip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.serviceTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.serviceLine {
+  display: block;
+  margin-top: 2px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--color-muted);
+}
+
+.menuFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 0.25rem;
+  padding: 0.75rem 0.75rem 0.625rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 13px;
+  color: var(--color-muted);
+  transition: color 150ms;
+}
+
+.menuFoot:hover {
+  color: var(--color-foreground);
+}
+
+/* ── phone menu (below md) ── */
+
+.burgerLines {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 10px;
+}
+
+.burgerLines i {
+  position: absolute;
+  left: 0;
+  top: 1.5px;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 2px;
+  background: currentColor;
+  transition:
+    top 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    rotate 320ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burgerLines i + i {
+  top: 7px;
+}
+
+.nav:has(.mobileMenu:popover-open) .burgerLines i {
+  top: 4.25px;
+  rotate: 45deg;
+}
+
+.nav:has(.mobileMenu:popover-open) .burgerLines i + i {
+  rotate: -45deg;
+}
+
+.mobileMenu {
+  inset: auto;
+  margin: 0;
+  border: 0;
+  pointer-events: auto;
+  /* under the bar, edge to edge with it */
+  top: 4.125rem;
+  left: 12px;
+  right: 12px;
+  width: auto;
+  max-height: calc(100dvh - 5.25rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.75rem 0.5rem 0.625rem;
+  border-radius: 1.5rem;
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  box-shadow:
+    0 0 0 1px rgb(20 22 26 / 0.06),
+    0 2px 6px -2px rgb(20 22 26 / 0.06),
+    0 18px 44px -12px rgb(30 58 95 / 0.22);
+  transform-origin: top center;
+  /* closed; it leaves faster than it arrives */
+  opacity: 0;
+  translate: 0 -8px;
+  scale: 0.985;
+  transition-property: opacity, translate, scale, display, overlay;
+  transition-duration: 160ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-behavior: allow-discrete;
+}
+
+@media (min-width: 640px) {
+  .mobileMenu {
+    top: 4.25rem;
+    left: 24px;
+    right: 24px;
+  }
+}
+
+.mobileMenu:popover-open {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  transition-duration: 320ms;
+}
+
+/* from md the bar has its own links: a menu left open by a rotated tablet goes */
+@media (min-width: 768px) {
+  .mobileMenu:popover-open {
+    display: none;
+  }
+}
+
+@starting-style {
+  .mobileMenu:popover-open {
+    opacity: 0;
+    translate: 0 -8px;
+    scale: 0.985;
+  }
+}
+
+/* the rows follow the panel in, one after another */
+.mobileMenu li {
+  opacity: 0;
+  translate: 0 6px;
+  transition:
+    opacity 260ms ease-out,
+    translate 380ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition-delay: calc(50ms + var(--i, 0) * 22ms);
+}
+
+.mobileMenu:popover-open li {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@starting-style {
+  .mobileMenu:popover-open li {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}
+
+.mobileMenu:not(:popover-open) li {
+  transition-delay: 0ms;
+  transition-duration: 100ms;
+}
+
+.groupLabel {
+  padding: 0 0.75rem 0.375rem;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.mobileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  transition: background-color 150ms;
+}
+
+.mobileItem:active,
+.mobileItem[aria-current] {
+  background: rgb(20 22 26 / 0.04);
+}
+
+.mobileMuted {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.mobilePrimary {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.mobilePrimary .mobileItem {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mobileLanguages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 0.5rem 0.25rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.languageChip {
+  display: flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.languageChip[aria-current] {
+  border-color: var(--color-accent);
+  color: var(--color-foreground);
+}
+
+/* no Popover API: the menus can't open, so their buttons go; Services
+   becomes a plain link to the home page's services */
+.popoverFallback {
+  display: none;
+}
+
+@supports not selector(:popover-open) {
+  .needsPopover {
+    display: none;
+  }
+
+  .popoverFallback {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .servicesMenu,
+  .servicesMenu:popover-open,
+  .mobileMenu,
+  .mobileMenu:popover-open,
+  .mobileMenu li {
+    translate: none;
+    scale: none;
+  }
+
+  .mobileMenu li {
+    transition-delay: 0ms;
+  }
+
+  .burgerLines i {
+    transition: none;
+  }
+}

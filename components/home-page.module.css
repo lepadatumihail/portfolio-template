@@ -1,0 +1,14 @@
+.page { --color-muted: #666664; }
+
+/* Keep the homepage's rhythm compact without changing service/article pages. */
+.page > section { padding-block: 40px; }
+.page > :global(#services) { padding-top: 24px; }
+
+@media (min-width: 640px) {
+  .page > section { padding-block: 56px; }
+  .page > :global(#services) { padding-top: 32px; }
+}
+
+@media (min-width: 700px) {
+  .page > :global(#services) { padding-top: 56px; }
+}

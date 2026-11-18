@@ -1,0 +1,15 @@
+/* Russian pages only — imported by app/ru/layout.tsx.
+
+   Cyrillic in the serif accent is set in a static instance of Noto Serif
+   Display Italic at weight 400 (see app/ru/fonts.ts). This pins the accent to
+   that weight, so a bold parent never makes the browser embolden it — and
+   Instrument Serif, with one weight of its own, is unaffected.
+
+   The file also keeps the Russian font rules out of the other pages: with only
+   the next/font rule to bundle, the CSS chunking of `next build` merges the
+   Cyrillic @font-face into the stylesheet every page shares, and every page
+   then preloads the Cyrillic file. A Russian-only stylesheet here keeps them
+   in a chunk of their own (checked with Next 16.2.10). */
+.font-serif {
+  font-weight: 400;
+}
